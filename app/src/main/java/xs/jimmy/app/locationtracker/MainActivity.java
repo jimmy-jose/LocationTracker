@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements
     // Tracks the bound state of the service.
     private boolean mBound = false;
 
-    private TextView locationText;
 
 
 
@@ -102,7 +101,6 @@ public class MainActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_main);
 
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        locationText = findViewById(R.id.location_text);
         myReceiver = new MyReceiver();
         viewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
         binding.setViewModel((MainActivityViewModel) viewModel);
